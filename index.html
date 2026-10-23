@@ -1,794 +1,1513 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-          "surface-variant": "#2f3448",
-          "on-secondary": "#490080",
-          "tertiary-container": "#ffcfd4",
-          "surface-container-lowest": "#080d1f",
-          "secondary-fixed": "#f0dbff",
-          "celestial-node": "#FACC15",
-          "on-primary-fixed-variant": "#004f53",
-          "star-white": "#F8FAFC",
-          "primary": "#e0fdff",
-          "surface-container-highest": "#2f3448",
-          "surface-container-low": "#161b2d",
-          "starlight-coral": "#FF5E7E",
-          "secondary": "#ddb7ff",
-          "on-primary": "#00373a",
-          "error-container": "#93000a",
-          "on-tertiary": "#670022",
-          "on-background": "#dde1fb",
-          "surface": "#0d1224",
-          "surface-container-high": "#24293c",
-          "on-error": "#690005",
-          "energy-cyan": "#00F2FE",
-          "surface-tint": "#00dce6",
-          "surface-dim": "#0d1224",
-          "on-secondary-fixed": "#2c0051",
-          "tertiary-fixed": "#ffd9dd",
-          "inverse-primary": "#00696f",
-          "background": "#0d1224",
-          "tertiary": "#fff5f5",
-          "inverse-surface": "#dde1fb",
-          "outline-variant": "#3a494b",
-          "secondary-container": "#6f00be",
-          "surface-glass": "#121933",
-          "surface-container": "#1a1f31",
-          "tertiary-fixed-dim": "#ffb2bb",
-          "space-void": "#070913",
-          "primary-fixed": "#6ff6ff",
-          "primary-container": "#00f2fe",
-          "on-tertiary-fixed-variant": "#910033",
-          "on-tertiary-container": "#b5254a",
-          "on-tertiary-fixed": "#400012",
-          "surface-bright": "#34384c",
-          "stardust-muted": "#94A3B8",
-          "inverse-on-surface": "#2b3043",
-          "primary-fixed-dim": "#00dce6",
-          "nebula-violet": "#A855F7",
-          "on-secondary-container": "#d6a9ff",
-          "outline": "#849495",
-          "secondary-fixed-dim": "#ddb7ff",
-          "on-primary-fixed": "#002022",
-          "energy-flow": "#4FACFE",
-          "on-secondary-fixed-variant": "#6900b3",
-          "error": "#ffb4ab",
-          "on-error-container": "#ffdad6",
-          "on-surface": "#dde1fb",
-          "on-surface-variant": "#b9cacb",
-          "on-primary-container": "#006a70"
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#2f3448",
+            "on-secondary": "#490080",
+            "tertiary-container": "#ffcfd4",
+            "surface-container-lowest": "#080d1f",
+            "secondary-fixed": "#f0dbff",
+            "celestial-node": "#FACC15",
+            "on-primary-fixed-variant": "#004f53",
+            "star-white": "#F8FAFC",
+            "primary": "#e0fdff",
+            "surface-container-highest": "#2f3448",
+            "surface-container-low": "#161b2d",
+            "starlight-coral": "#FF5E7E",
+            "secondary": "#ddb7ff",
+            "on-primary": "#00373a",
+            "error-container": "#93000a",
+            "on-tertiary": "#670022",
+            "on-background": "#dde1fb",
+            "surface": "#0d1224",
+            "surface-container-high": "#24293c",
+            "on-error": "#690005",
+            "energy-cyan": "#00F2FE",
+            "surface-tint": "#00dce6",
+            "surface-dim": "#0d1224",
+            "on-secondary-fixed": "#2c0051",
+            "tertiary-fixed": "#ffd9dd",
+            "inverse-primary": "#00696f",
+            "background": "#0d1224",
+            "tertiary": "#fff5f5",
+            "inverse-surface": "#dde1fb",
+            "outline-variant": "#3a494b",
+            "secondary-container": "#6f00be",
+            "surface-glass": "#121933",
+            "surface-container": "#1a1f31",
+            "tertiary-fixed-dim": "#ffb2bb",
+            "space-void": "#070913",
+            "primary-fixed": "#6ff6ff",
+            "primary-container": "#00f2fe",
+            "on-tertiary-fixed-variant": "#910033",
+            "on-tertiary-container": "#b5254a",
+            "on-tertiary-fixed": "#400012",
+            "surface-bright": "#34384c",
+            "stardust-muted": "#94A3B8",
+            "inverse-on-surface": "#2b3043",
+            "primary-fixed-dim": "#00dce6",
+            "nebula-violet": "#A855F7",
+            "on-secondary-container": "#d6a9ff",
+            "outline": "#849495",
+            "secondary-fixed-dim": "#ddb7ff",
+            "on-primary-fixed": "#002022",
+            "energy-flow": "#4FACFE",
+            "on-secondary-fixed-variant": "#6900b3",
+            "error": "#ffb4ab",
+            "on-error-container": "#ffdad6",
+            "on-surface": "#dde1fb",
+            "on-surface-variant": "#b9cacb",
+            "on-primary-container": "#006a70"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "margin": "2rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "gutter-mobile": "0.75rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-xl": [
+              "Space Grotesk"
+            ],
+            "body-sm": [
+              "Outfit"
+            ],
+            "body-lg": [
+              "Outfit"
+            ],
+            "body-md": [
+              "Outfit"
+            ],
+            "label-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "display-hero": [
+              "Space Grotesk"
+            ],
+            "headline-xl-mobile": [
+              "Space Grotesk"
+            ],
+            "display-hero-mobile": [
+              "Space Grotesk"
+            ],
+            "label-md": [
+              "Plus Jakarta Sans"
+            ],
+            "label-counter": [
+              "Space Grotesk"
+            ],
+            "headline-md": [
+              "Space Grotesk"
+            ]
+          },
+          "fontSize": {
+            "headline-xl": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "body-sm": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "400"
+              }
+            ],
+            "body-lg": [
+              "18px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "400"
+              }
+            ],
+            "body-md": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "label-lg": [
+              "16px",
+              {
+                "lineHeight": "22px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "600"
+              }
+            ],
+            "display-hero": [
+              "56px",
+              {
+                "lineHeight": "64px",
+                "letterSpacing": "-0.03em",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-xl-mobile": [
+              "26px",
+              {
+                "lineHeight": "34px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "700"
+              }
+            ],
+            "display-hero-mobile": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "label-md": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "letterSpacing": "0.04em",
+                "fontWeight": "700"
+              }
+            ],
+            "label-counter": [
+              "20px",
+              {
+                "lineHeight": "24px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-md": [
+              "22px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ]
+          }
         },
-        "borderRadius": {
-          "DEFAULT": "0.25rem",
-          "lg": "0.5rem",
-          "xl": "0.75rem",
-          "full": "9999px"
-        },
-        "spacing": {
-          "space-md": "1rem",
-          "margin": "2rem",
-          "gutter": "1rem",
-          "space-xs": "0.25rem",
-          "space-xl": "2.5rem",
-          "gutter-mobile": "0.75rem",
-          "space-lg": "1.5rem",
-          "margin-mobile": "1rem",
-          "space-sm": "0.5rem"
-        },
-        "fontFamily": {
-          "headline-xl": [
-            "Space Grotesk"
-          ],
-          "body-sm": [
-            "Outfit"
-          ],
-          "body-lg": [
-            "Outfit"
-          ],
-          "body-md": [
-            "Outfit"
-          ],
-          "label-lg": [
-            "Plus Jakarta Sans"
-          ],
-          "display-hero": [
-            "Space Grotesk"
-          ],
-          "headline-xl-mobile": [
-            "Space Grotesk"
-          ],
-          "display-hero-mobile": [
-            "Space Grotesk"
-          ],
-          "label-md": [
-            "Plus Jakarta Sans"
-          ],
-          "label-counter": [
-            "Space Grotesk"
-          ],
-          "headline-md": [
-            "Space Grotesk"
-          ]
-        },
-        "fontSize": {
-          "headline-xl": [
-            "32px",
-            {
-              "lineHeight": "40px",
-              "letterSpacing": "-0.02em",
-              "fontWeight": "700"
-            }
-          ],
-          "body-sm": [
-            "14px",
-            {
-              "lineHeight": "20px",
-              "fontWeight": "400"
-            }
-          ],
-          "body-lg": [
-            "18px",
-            {
-              "lineHeight": "28px",
-              "fontWeight": "400"
-            }
-          ],
-          "body-md": [
-            "16px",
-            {
-              "lineHeight": "24px",
-              "fontWeight": "400"
-            }
-          ],
-          "label-lg": [
-            "16px",
-            {
-              "lineHeight": "22px",
-              "letterSpacing": "0.01em",
-              "fontWeight": "600"
-            }
-          ],
-          "display-hero": [
-            "56px",
-            {
-              "lineHeight": "64px",
-              "letterSpacing": "-0.03em",
-              "fontWeight": "700"
-            }
-          ],
-          "headline-xl-mobile": [
-            "26px",
-            {
-              "lineHeight": "34px",
-              "letterSpacing": "-0.01em",
-              "fontWeight": "700"
-            }
-          ],
-          "display-hero-mobile": [
-            "36px",
-            {
-              "lineHeight": "44px",
-              "letterSpacing": "-0.02em",
-              "fontWeight": "700"
-            }
-          ],
-          "label-md": [
-            "13px",
-            {
-              "lineHeight": "18px",
-              "letterSpacing": "0.04em",
-              "fontWeight": "700"
-            }
-          ],
-          "label-counter": [
-            "20px",
-            {
-              "lineHeight": "24px",
-              "letterSpacing": "0.02em",
-              "fontWeight": "700"
-            }
-          ],
-          "headline-md": [
-            "22px",
-            {
-              "lineHeight": "28px",
-              "fontWeight": "600"
-            }
-          ]
-        }
       },
-    },
-  };</script></head><body class="bg-space-void text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 w-full z-50 bg-space-void/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="STARWEAVER Cosmic Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACnLhVsdvka1rl-rFroyIup9UAYctptQqCqa_aSjz1Svhf-BreSTAwJufBJifWGnH_Hfr3oSe_yBpMBAcffDVsOzR37sUwda9UbmALkJV00c6Y6Z4gGw1TLOihQrxYVY0zkEsBVXPGmRf1RRY63qVeLh_YmKomPY26ribskSUeMJLRgsL7lkVNqWBxtpTT9fKmDGpPM4ZgbzVGYdSV9dJhqCbH6Z2cO3KrRgRjH-FJiDdwBV_dPOzE"/><span class="font-headline-xl text-headline-xl tracking-tight uppercase text-primary hidden sm:inline-block">STARWEAVER</span></div><div class="h-6 w-px bg-surface-variant mx-space-xs hidden md:block"></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-glass text-stardust-muted font-label-md text-label-md"><span class="text-energy-flow font-semibold">Constellation Sector: Lyra</span><span class="text-outline-variant">•</span><span class="text-star-white font-medium">Level 04: Stardust Conduit</span></div></div><nav class="hidden lg:flex items-center gap-space-sm" data-active-classes="bg-surface-container-high text-primary font-bold rounded-xl"><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-surface-container-high text-primary font-bold rounded-xl" data-path="play" href="#">Matrix</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="star-map" href="#">Constellations</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="codex" href="#">Star Codex</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="rankings" href="#">Galactic Hall</a></nav><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-low"><span class="material-symbols-outlined text-celestial-node text-[18px]">military_tech</span><div class="flex flex-col"><span class="text-[10px] uppercase tracking-wider text-stardust-muted font-bold leading-none">High Score</span><span class="font-label-counter text-label-counter text-celestial-node leading-tight">94,820</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Toggle Audio System" class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" type="button"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button aria-label="Toggle Fullscreen Arcade Display" class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all hidden sm:flex" type="button"><span class="material-symbols-outlined text-[20px]">fullscreen</span></button><button aria-label="Open Game Pause and System Settings Menu" class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" type="button"><span class="material-symbols-outlined text-[20px]">pause</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-space-void min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center"><div class="flex flex-col w-full relative overflow-hidden select-none">
-<!-- Dynamic Cosmic Nebula Glow Background Accents -->
-<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[720px] bg-gradient-to-b from-energy-cyan/15 via-nebula-violet/10 to-transparent blur-3xl pointer-events-none rounded-full"></div>
-<div class="absolute bottom-4 left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-secondary-container/20 to-transparent blur-3xl pointer-events-none rounded-full"></div>
-<!-- Primary Gameplay Canvas Container -->
-<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col items-center justify-between min-h-[calc(100vh-8.5rem)]">
-<!-- 1. TOP MISSION HUD STRIP -->
-<header class="w-full max-w-4xl flex flex-col gap-3">
-<!-- High-level Status Badges & Star Tier -->
-<div class="flex flex-wrap items-center justify-between gap-3 bg-surface-glass/80 backdrop-blur-xl rounded-2xl px-5 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
-<!-- Sector / Level Info -->
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shadow-inner">
-<span class="material-symbols-outlined text-energy-cyan text-[24px]">hub</span>
-</div>
-<div>
-<div class="flex items-center gap-2">
-<span class="px-2 py-0.5 rounded-full bg-energy-cyan/15 text-primary-fixed font-label-md text-[11px] tracking-wider uppercase font-bold">Sector Lyra</span>
-<span class="font-headline-md text-star-white text-[15px] sm:text-headline-md tracking-tight">Level 04 • Nebula Conduit</span>
-</div>
-<p class="font-body-sm text-[12px] text-stardust-muted">Direct the astral energy from Comet Core α to the Warp Gate</p>
-</div>
-</div>
-<!-- Star Rating Tier & Target Moves HUD -->
-<div class="flex items-center gap-4">
-<!-- Move Counter Capsule -->
-<div class="flex items-center gap-2.5 px-3.5 py-1.5 rounded-xl bg-surface-container-low shadow-sm">
-<svg class="w-7 h-7 -rotate-90" viewbox="0 0 36 36">
-<circle class="stroke-surface-variant" cx="18" cy="18" fill="none" r="14" stroke-width="3"></circle>
-<circle class="stroke-primary-container transition-all duration-300" cx="18" cy="18" fill="none" id="moveProgressRing" r="14" stroke-dasharray="88" stroke-dashoffset="38" stroke-linecap="round" stroke-width="3"></circle>
-</svg>
-<div class="flex flex-col">
-<span class="font-label-md text-[10px] uppercase tracking-wider text-stardust-muted">Moves</span>
-<div class="flex items-baseline gap-1">
-<span class="font-label-counter text-energy-cyan text-lg leading-none" id="moveCountText">6</span>
-<span class="text-stardust-muted text-xs font-label-md">/ 14 Par</span>
-</div>
-</div>
-</div>
-<!-- Constellation Stars -->
-<div class="flex items-center gap-1 bg-surface-container-low px-3 py-1.5 rounded-xl">
-<span class="material-symbols-outlined text-celestial-node text-[20px] drop-shadow-[0_0_8px_rgba(250,204,21,0.7)]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-celestial-node text-[20px] drop-shadow-[0_0_8px_rgba(250,204,21,0.7)]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-outline-variant text-[20px]">star</span>
-</div>
-</div>
-</div>
-<!-- Live Stream Energy Sync Bar -->
-<div class="w-full bg-surface-container-lowest/80 backdrop-blur-md rounded-xl p-3 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-2.5 w-full sm:w-auto">
-<div class="w-2.5 h-2.5 rounded-full bg-energy-cyan animate-ping"></div>
-<span class="font-label-md text-xs tracking-wider uppercase text-on-surface-variant font-bold">Stream Integrity:</span>
-<span class="font-label-counter text-energy-cyan text-sm tracking-wide" id="integrityPctText">75% CONNECTED</span>
-</div>
-<div class="w-full sm:flex-1 max-w-md bg-surface-container-highest rounded-full h-2.5 overflow-hidden p-0.5 shadow-inner">
-<div class="h-full rounded-full bg-gradient-to-r from-energy-flow via-energy-cyan to-primary-fixed shadow-[0_0_12px_rgba(0,242,254,0.8)] transition-all duration-500" id="integrityBar" style="width: 75%"></div>
-</div>
-<div class="hidden md:flex items-center gap-1.5 text-starlight-coral font-label-md text-xs">
-<span class="material-symbols-outlined text-sm">bolt</span>
-<span>1 Tile Off Target</span>
-</div>
-</div>
-</header>
-<!-- 2. MAIN CENTER MATRIX + ASTRA COMPANION -->
-<div class="w-full max-w-5xl my-4 flex flex-col lg:flex-row items-center justify-center gap-6 relative">
-<!-- LEFT FLANK: Cosmic Mascot Companion "Astra" -->
-<div class="order-2 lg:order-1 flex lg:flex-col items-center gap-4 bg-surface-glass/90 backdrop-blur-lg rounded-2xl p-4 max-w-sm w-full lg:w-60 shadow-[0_8px_24px_rgba(0,0,0,0.4)]">
-<!-- Floating Animated Celestial Core -->
-<div class="relative w-16 h-16 flex-shrink-0 flex items-center justify-center">
-<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-nebula-violet via-energy-cyan to-celestial-node animate-pulse opacity-40 blur-md"></div>
-<div class="relative w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center shadow-lg">
-<!-- 8-Star Inspired Mascot Avatar -->
-<svg class="w-10 h-10 text-primary-container animate-[spin_12s_linear_infinite]" fill="none" viewbox="0 0 100 100">
-<path d="M50 5 L61 38 L95 38 L68 58 L78 92 L50 71 L22 92 L32 58 L5 38 L39 38 Z" fill="rgba(0, 242, 254, 0.2)" stroke="currentColor" stroke-linejoin="round" stroke-width="4"></path>
-<circle class="animate-ping opacity-75" cx="50" cy="50" fill="#FACC15" r="10"></circle>
-<circle cx="50" cy="50" fill="#F8FAFC" r="8"></circle>
-</svg>
-</div>
-<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-celestial-node border-2 border-space-void"></span>
-</div>
-<!-- Dialogue Bubble -->
-<div class="flex-1 flex flex-col gap-1 text-left lg:text-center">
-<div class="flex items-center justify-between lg:justify-center gap-2">
-<span class="font-headline-md text-primary text-xs uppercase tracking-wider font-bold">Astra • Conduit Guide</span>
-<span class="material-symbols-outlined text-energy-flow text-sm">auto_awesome</span>
-</div>
-<p class="font-body-md text-xs text-on-surface-variant leading-relaxed" id="astraSpeech">
-            “Almost there, Weaver! Rotate Node [3,2] once clockwise to bridge the gateway current.”
-          </p>
-</div>
-</div>
-<!-- CENTER: THE TACTILE 4x4 CONDUIT CHAMBER -->
-<div class="order-1 lg:order-2 relative flex flex-col items-center">
-<!-- Comet Core Start Indicator (Top Left Anchor) -->
-<div class="absolute -top-6 -left-4 sm:-top-8 sm:-left-6 z-20 flex items-center gap-2 bg-surface-container-low/95 px-3 py-1.5 rounded-full shadow-[0_0_20px_rgba(250,204,21,0.5)]">
-<div class="w-4 h-4 rounded-full bg-celestial-node animate-ping"></div>
-<span class="font-label-md text-xs text-celestial-node font-bold flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">flare</span> START: COMET SPARK
-          </span>
-</div>
-<!-- Warp Gateway End Indicator (Bottom Right Anchor) -->
-<div class="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-6 z-20 flex items-center gap-2 bg-surface-container-low/95 px-3 py-1.5 rounded-full shadow-[0_0_25px_rgba(168,85,247,0.7)]">
-<span class="font-label-md text-xs text-secondary-fixed font-bold flex items-center gap-1">
-            GATEWAY TARGET <span class="material-symbols-outlined text-[14px]">cyclone</span>
-</span>
-<div class="w-4 h-4 rounded-full bg-nebula-violet animate-spin"></div>
-</div>
-<!-- Chamber Glass Board Frame -->
-<div class="p-3 sm:p-5 rounded-3xl bg-surface-container-lowest/85 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)] relative">
-<!-- Inner Ambient Glow Behind Grid -->
-<div class="absolute inset-0 bg-radial from-energy-cyan/5 via-transparent to-transparent pointer-events-none rounded-3xl"></div>
-<!-- 4x4 Playable Puzzle Grid -->
-<div class="grid grid-cols-4 gap-2.5 sm:gap-3.5 w-[310px] sm:w-[420px] aspect-square relative z-10" id="puzzleBoard">
-<!-- TILE 0: Top-Left Start Origin (Connected) -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden" data-rot="0" data-tile-id="0" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">0,0</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<!-- Glowing corner conduit from Top to Right -->
-<path class="filter drop-shadow-[0_0_8px_#00F2FE]" d="M 50 0 L 50 50 L 100 50" fill="none" stroke="#00F2FE" stroke-linecap="round" stroke-width="12"></path>
-<circle class="filter drop-shadow-[0_0_6px_#00F2FE]" cx="50" cy="50" fill="#F8FAFC" r="7"></circle>
-<circle class="animate-ping" cx="90" cy="50" fill="#FACC15" r="3"></circle>
-</svg>
-<div class="absolute inset-0 bg-energy-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none"></div>
-</button>
-<!-- TILE 1: Straight horizontal (Connected) -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden" data-rot="0" data-tile-id="1" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">0,1</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<path class="filter drop-shadow-[0_0_8px_#00F2FE]" d="M 0 50 L 100 50" fill="none" stroke="#00F2FE" stroke-linecap="round" stroke-width="12"></path>
-<line class="animate-pulse" stroke="#FFFFFF" stroke-dasharray="8 6" stroke-width="3" x1="20" x2="80" y1="50" y2="50"></line>
-</svg>
-</button>
-<!-- TILE 2: 90 deg corner Turn (Connected) -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden" data-rot="90" data-tile-id="2" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">0,2</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out rotate-90" viewbox="0 0 100 100">
-<path class="filter drop-shadow-[0_0_8px_#00F2FE]" d="M 0 50 L 50 50 L 50 100" fill="none" stroke="#00F2FE" stroke-linecap="round" stroke-width="12"></path>
-<circle cx="50" cy="50" fill="#00F2FE" r="6"></circle>
-</svg>
-</button>
-<!-- TILE 3: Unconnected Dead-End / Reservoir -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100" data-rot="0" data-tile-id="3" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">0,3</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<path d="M 50 50 L 50 100" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10"></path>
-<circle cx="50" cy="50" fill="none" r="12" stroke="#3A494B" stroke-width="6"></circle>
-</svg>
-</button>
-<!-- TILE 4: Dormant Cross -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100" data-rot="0" data-tile-id="4" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">1,0</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<path d="M 50 0 L 50 100 M 0 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10"></path>
-</svg>
-</button>
-<!-- TILE 5: Dormant Elbow -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100" data-rot="180" data-tile-id="5" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">1,1</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out rotate-180" viewbox="0 0 100 100">
-<path d="M 0 50 L 50 50 L 50 100" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10"></path>
-</svg>
-</button>
-<!-- TILE 6: Vertical Active Conduit (Connected) -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden" data-rot="0" data-tile-id="6" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">1,2</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<path class="filter drop-shadow-[0_0_8px_#00F2FE]" d="M 50 0 L 50 100" fill="none" stroke="#00F2FE" stroke-linecap="round" stroke-width="12"></path>
-<circle cx="50" cy="30" fill="#F8FAFC" r="4"></circle>
-<circle cx="50" cy="70" fill="#F8FAFC" r="4"></circle>
-</svg>
-</button>
-<!-- TILE 7: Dormant T-Junction -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100" data-rot="270" data-tile-id="7" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">1,3</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out -rotate-90" viewbox="0 0 100 100">
-<path d="M 50 0 L 50 100 M 50 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10"></path>
-</svg>
-</button>
-<!-- TILE 8: Straight Dormant -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100" data-rot="90" data-tile-id="8" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">2,0</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out rotate-90" viewbox="0 0 100 100">
-<path d="M 0 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10"></path>
-</svg>
-</button>
-<!-- TILE 9: Dormant Elbow -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100" data-rot="0" data-tile-id="9" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">2,1</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<path d="M 50 0 L 50 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10"></path>
-</svg>
-</button>
-<!-- TILE 10: T-Junction (Connected to stream) -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden" data-rot="0" data-tile-id="10" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">2,2</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<path class="filter drop-shadow-[0_0_8px_#00F2FE]" d="M 50 0 L 50 100 M 50 50 L 100 50" fill="none" stroke="#00F2FE" stroke-linecap="round" stroke-width="12"></path>
-<circle class="filter drop-shadow-[0_0_4px_#00F2FE]" cx="50" cy="50" fill="#F8FAFC" r="7"></circle>
-</svg>
-</button>
-<!-- TILE 11: MISALIGNED CRITICAL TILE (The missing link!) -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-high transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(255,94,126,0.3)] ring-2 ring-starlight-coral/60 animate-pulse flex items-center justify-center overflow-hidden cursor-pointer" data-rot="90" data-tile-id="11" id="criticalTile" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-starlight-coral font-bold flex items-center gap-0.5">
-                2,3 <span class="material-symbols-outlined text-[10px]">sync</span>
-</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out rotate-90" viewbox="0 0 100 100">
-<!-- Misaligned elbow pointing away: needs 1 rotation to align! -->
-<path class="filter drop-shadow-[0_0_8px_#FF5E7E]" d="M 0 50 L 50 50 L 50 0" fill="none" stroke="#FF5E7E" stroke-linecap="round" stroke-width="12"></path>
-<circle cx="50" cy="50" fill="#FF5E7E" r="7"></circle>
-</svg>
-<!-- Rotation guide hint icon on hover -->
-<div class="absolute inset-0 bg-starlight-coral/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-starlight-coral text-2xl animate-spin">rotate_right</span>
-</div>
-</button>
-<!-- TILE 12: Dormant Cross -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100" data-rot="0" data-tile-id="12" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">3,0</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<path d="M 50 0 L 50 100 M 0 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10"></path>
-</svg>
-</button>
-<!-- TILE 13: Dormant Straight -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100" data-rot="0" data-tile-id="13" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">3,1</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<path d="M 0 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10"></path>
-</svg>
-</button>
-<!-- TILE 14: Dormant Corner -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100" data-rot="0" data-tile-id="14" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">3,2</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<path d="M 0 50 L 50 50 L 50 0" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10"></path>
-</svg>
-</button>
-<!-- TILE 15: Bottom-Right Terminal to Warp Gate -->
-<button class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(168,85,247,0.4)] flex items-center justify-center overflow-hidden" data-rot="0" data-tile-id="15" id="terminalTile" type="button">
-<span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">3,3</span>
-<svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out" viewbox="0 0 100 100">
-<!-- Ready receiver terminal waiting for Top input -->
-<path class="filter drop-shadow-[0_0_8px_#A855F7]" d="M 50 0 L 50 50 L 100 50" fill="none" stroke="#A855F7" stroke-linecap="round" stroke-width="12"></path>
-<circle class="animate-ping opacity-50" cx="50" cy="50" fill="#A855F7" r="9"></circle>
-<circle cx="50" cy="50" fill="#F8FAFC" r="6"></circle>
-</svg>
-</button>
-</div>
-</div>
-</div>
-<!-- RIGHT FLANK: Galactic Codex Mini Lore & Score Multiplier -->
-<div class="order-3 hidden lg:flex flex-col gap-3 w-60">
-<!-- Energy Resonance Card -->
-<div class="bg-surface-glass/80 backdrop-blur-md rounded-2xl p-4 shadow-[0_8px_24px_rgba(0,0,0,0.4)] flex flex-col gap-2">
-<div class="flex items-center gap-2 text-celestial-node">
-<span class="material-symbols-outlined text-lg">bolt</span>
-<span class="font-label-md text-xs uppercase tracking-wider font-bold">Resonance Bonus</span>
-</div>
-<div class="flex items-baseline gap-1">
-<span class="font-headline-xl text-star-white text-2xl font-bold">2.4x</span>
-<span class="text-xs text-stardust-muted">Stardust Mult</span>
-</div>
-<p class="font-body-sm text-[11px] text-stardust-muted leading-tight">
-            Connecting conduits within Par count preserves the constellation's pure cosmic harmonic.
-          </p>
-</div>
-<!-- Starlight Node Mini Codex -->
-<div class="bg-surface-container-low/70 rounded-2xl p-3 flex items-center gap-3">
-<div class="w-9 h-9 rounded-xl bg-secondary-container/40 flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined text-[20px]">explore</span>
-</div>
-<div>
-<span class="font-label-md text-[11px] text-primary block font-bold">Astral Codex § 44</span>
-<span class="font-body-sm text-[11px] text-stardust-muted">Polarity: Cyan → Violet</span>
-</div>
-</div>
-</div>
-</div>
-<!-- 3. TACTILE ARCADE BOTTOM DOCK CONTROLS -->
-<footer class="w-full max-w-3xl flex flex-col items-center gap-3 pt-2 pb-4">
-<!-- Primary Interactive Button Row -->
-<div class="w-full flex items-center justify-center sm:justify-between flex-wrap gap-3 bg-surface-glass/90 backdrop-blur-xl p-3 rounded-2xl shadow-[0_12px_36px_rgba(0,0,0,0.6)]">
-<!-- Left Sub-actions (Undo & Restart) -->
-<div class="flex items-center gap-2">
-<button class="group px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-xs sm:text-sm flex items-center gap-2 transition-all active:translate-y-0.5 shadow-sm" id="undoBtn" type="button">
-<span class="material-symbols-outlined text-primary text-[18px] group-hover:-rotate-45 transition-transform">undo</span>
-<span>Undo</span>
-<kbd class="hidden sm:inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-[10px] text-stardust-muted font-mono font-bold">Z</kbd>
-</button>
-<button class="group px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-xs sm:text-sm flex items-center gap-2 transition-all active:translate-y-0.5 shadow-sm" id="restartBtn" type="button">
-<span class="material-symbols-outlined text-starlight-coral text-[18px] group-hover:rotate-180 transition-transform duration-500">restart_alt</span>
-<span>Reset</span>
-<kbd class="hidden sm:inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-[10px] text-stardust-muted font-mono font-bold">R</kbd>
-</button>
-</div>
-<!-- Center CTA: Solve / Hint Capsule -->
-<div class="flex items-center gap-2">
-<button class="px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-variant text-star-white font-label-md text-xs sm:text-sm flex items-center gap-2.5 transition-all shadow-[0_4px_12px_rgba(0,0,0,0.4)]" id="hintBtn" type="button">
-<span class="material-symbols-outlined text-celestial-node text-[20px] animate-bounce">lightbulb</span>
-<span>Cosmic Hint</span>
-<span class="px-2 py-0.5 rounded-full bg-celestial-node/20 text-celestial-node font-bold text-[11px]">2 left</span>
-</button>
-<!-- Audio & Ambient Toggle -->
-<button aria-label="Toggle Synth Audio" class="w-10 h-10 rounded-xl bg-surface-container hover:bg-surface-container-high text-energy-cyan flex items-center justify-center transition-all shadow-sm" id="soundToggle" type="button">
-<span class="material-symbols-outlined text-[20px]">music_note</span>
-</button>
-</div>
-</div>
-<!-- Quick Accessibility Keyboard Guide Pill -->
-<div class="flex items-center gap-3 text-stardust-muted text-[11px] font-label-md">
-<span class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[13px] text-energy-cyan">touch_app</span> Click / Space to Rotate
-        </span>
-<span>•</span>
-<span class="flex items-center gap-1">
-<kbd class="px-1 rounded bg-surface-container text-[10px] font-mono">H</kbd> Hint
-        </span>
-<span>•</span>
-<span class="flex items-center gap-1">
-<kbd class="px-1 rounded bg-surface-container text-[10px] font-mono">Z</kbd> Undo
-        </span>
-<span>•</span>
-<span class="flex items-center gap-1">
-<kbd class="px-1 rounded bg-surface-container text-[10px] font-mono">R</kbd> Restart
-        </span>
-</div>
-</footer>
-</div>
-<!-- VICTORY PORTAL MODAL (Reveals on 100% circuit alignment) -->
-<div class="fixed inset-0 z-50 flex items-center justify-center bg-space-void/80 backdrop-blur-2xl opacity-0 pointer-events-none transition-all duration-500 p-4" id="victoryModal">
-<div class="relative w-full max-w-md bg-surface-glass rounded-3xl p-6 sm:p-8 shadow-[0_0_60px_rgba(0,242,254,0.4)] text-center flex flex-col items-center gap-5">
-<!-- Luminous Radial Badge -->
-<div class="relative w-24 h-24 flex items-center justify-center">
-<div class="absolute inset-0 rounded-full bg-gradient-to-r from-energy-cyan to-nebula-violet animate-spin opacity-70 blur-lg"></div>
-<div class="relative w-20 h-20 rounded-full bg-surface-container-lowest flex items-center justify-center">
-<span class="material-symbols-outlined text-energy-cyan text-[42px] animate-bounce">auto_mode</span>
-</div>
-</div>
-<!-- Complete Message -->
-<div>
-<span class="font-label-md text-xs tracking-widest text-energy-cyan uppercase font-bold">Conduit Aligned!</span>
-<h2 class="font-display-hero text-2xl sm:text-display-hero tracking-tight text-star-white font-bold mt-1">STARSTREAM HARMONIZED</h2>
-<p class="font-body-md text-xs text-stardust-muted mt-2">
-          The Comet's stardust pulses freely through Sector Lyra. The cosmic warp portal has opened!
-        </p>
-</div>
-<!-- Metrics Breakdown -->
-<div class="w-full grid grid-cols-3 gap-2 bg-surface-container-low rounded-2xl p-3">
-<div class="flex flex-col items-center">
-<span class="font-body-sm text-[10px] uppercase text-stardust-muted font-bold">Moves</span>
-<span class="font-label-counter text-energy-cyan text-lg font-bold">7 / 14</span>
-</div>
-<div class="flex flex-col items-center">
-<span class="font-body-sm text-[10px] uppercase text-stardust-muted font-bold">Rating</span>
-<div class="flex text-celestial-node">
-<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-<div class="flex flex-col items-center">
-<span class="font-body-sm text-[10px] uppercase text-stardust-muted font-bold">Score</span>
-<span class="font-label-counter text-celestial-node text-lg font-bold">+1,850</span>
-</div>
-</div>
-<!-- Action Buttons -->
-<div class="w-full flex flex-col gap-2.5">
-<button class="w-full py-3.5 rounded-xl bg-gradient-to-r from-energy-flow to-energy-cyan text-space-void font-label-lg font-bold text-sm tracking-wide shadow-[0_6px_0_#0098a6,0_16px_30px_rgba(0,242,254,0.4)] hover:brightness-110 active:translate-y-1 active:shadow-[0_2px_0_#0098a6] transition-all flex items-center justify-center gap-2" id="nextPortalBtn" type="button">
-<span>ENTER LEVEL 05 PORTAL</span>
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-</button>
-<button class="w-full py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-stardust-muted hover:text-star-white font-label-md text-xs transition-colors" id="replayBtn" type="button">
-          Replay Constellation
-        </button>
-</div>
-</div>
-</div>
-<!-- INTERACTIVE PLAY ENGINE JAVASCRIPT -->
-<script>
-    (function initStarweaver() {
-      let moveCount = 6;
-      const maxPar = 14;
-      let historyStack = [];
-      let isSolved = false;
+    };</script>
+</head>
 
-      const criticalTile = document.getElementById('criticalTile');
-      const terminalTile = document.getElementById('terminalTile');
-      const moveCountText = document.getElementById('moveCountText');
-      const moveProgressRing = document.getElementById('moveProgressRing');
-      const integrityBar = document.getElementById('integrityBar');
-      const integrityPctText = document.getElementById('integrityPctText');
-      const astraSpeech = document.getElementById('astraSpeech');
-      const victoryModal = document.getElementById('victoryModal');
-      const undoBtn = document.getElementById('undoBtn');
-      const restartBtn = document.getElementById('restartBtn');
-      const hintBtn = document.getElementById('hintBtn');
-      const replayBtn = document.getElementById('replayBtn');
-      const nextPortalBtn = document.getElementById('nextPortalBtn');
+<body
+  class="bg-space-void text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen">
+  <header class="fixed top-0 left-0 w-full z-50 bg-space-void/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-md">
+        <div class="flex items-center gap-space-sm"><img alt="STARWEAVER Cosmic Logo" class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuACnLhVsdvka1rl-rFroyIup9UAYctptQqCqa_aSjz1Svhf-BreSTAwJufBJifWGnH_Hfr3oSe_yBpMBAcffDVsOzR37sUwda9UbmALkJV00c6Y6Z4gGw1TLOihQrxYVY0zkEsBVXPGmRf1RRY63qVeLh_YmKomPY26ribskSUeMJLRgsL7lkVNqWBxtpTT9fKmDGpPM4ZgbzVGYdSV9dJhqCbH6Z2cO3KrRgRjH-FJiDdwBV_dPOzE" /><span
+            class="font-headline-xl text-headline-xl tracking-tight uppercase text-primary hidden sm:inline-block">STARWEAVER</span>
+        </div>
+        <div class="h-6 w-px bg-surface-variant mx-space-xs hidden md:block"></div>
+        <div
+          class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-glass text-stardust-muted font-label-md text-label-md">
+          <span class="text-energy-flow font-semibold">Constellation Sector: Lyra</span><span
+            class="text-outline-variant">•</span><span class="text-star-white font-medium">Level 04: Stardust
+            Conduit</span></div>
+      </div>
+      <nav class="hidden lg:flex items-center gap-space-sm"
+        data-active-classes="bg-surface-container-high text-primary font-bold rounded-xl"><a aria-current="page"
+          class="px-space-md py-space-xs transition-colors bg-surface-container-high text-primary font-bold rounded-xl"
+          data-path="play" href="#">Matrix</a><a
+          class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors"
+          data-path="star-map" href="#">Constellations</a><a
+          class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors"
+          data-path="codex" href="#">Star Codex</a><a
+          class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors"
+          data-path="rankings" href="#">Galactic Hall</a></nav>
+      <div class="flex items-center gap-space-sm">
+        <div
+          class="hidden sm:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-low">
+          <span class="material-symbols-outlined text-celestial-node text-[18px]">military_tech</span>
+          <div class="flex flex-col"><span
+              class="text-[10px] uppercase tracking-wider text-stardust-muted font-bold leading-none">High
+              Score</span><span
+              class="font-label-counter text-label-counter text-celestial-node leading-tight">94,820</span></div>
+        </div>
+        <div class="flex items-center gap-space-xs"><button aria-label="Toggle Audio System"
+            class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"
+            id="headerAudioBtn" type="button"><span
+              class="material-symbols-outlined text-[20px]">volume_up</span></button><button
+            aria-label="Toggle Fullscreen Arcade Display"
+            class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all hidden sm:flex"
+            type="button"><span class="material-symbols-outlined text-[20px]">fullscreen</span></button><button
+            aria-label="Open Game Pause and System Settings Menu"
+            class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"
+            type="button"><span class="material-symbols-outlined text-[20px]">pause</span></button></div>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-20 bg-space-void min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center">
+    <div class="flex flex-col w-full relative overflow-hidden select-none">
+      <!-- Dynamic Cosmic Nebula Glow Background Accents -->
+      <div
+        class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[720px] bg-gradient-to-b from-energy-cyan/15 via-nebula-violet/10 to-transparent blur-3xl pointer-events-none rounded-full">
+      </div>
+      <div
+        class="absolute bottom-4 left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-secondary-container/20 to-transparent blur-3xl pointer-events-none rounded-full">
+      </div>
+      <!-- Primary Gameplay Canvas Container -->
+      <div
+        class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col items-center justify-between min-h-[calc(100vh-8.5rem)]">
+        <!-- 1. TOP MISSION HUD STRIP -->
+        <header class="w-full max-w-4xl flex flex-col gap-3">
+          <!-- High-level Status Badges & Star Tier -->
+          <div
+            class="flex flex-wrap items-center justify-between gap-3 bg-surface-glass/80 backdrop-blur-xl rounded-2xl px-5 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+            <!-- Sector / Level Info -->
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shadow-inner">
+                <span class="material-symbols-outlined text-energy-cyan text-[24px]">hub</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="px-2 py-0.5 rounded-full bg-energy-cyan/15 text-primary-fixed font-label-md text-[11px] tracking-wider uppercase font-bold">Sector
+                    Lyra</span>
+                  <span class="font-headline-md text-star-white text-[15px] sm:text-headline-md tracking-tight">Level 04
+                    • Nebula Conduit</span>
+                </div>
+                <p class="font-body-sm text-[12px] text-stardust-muted">Direct the astral energy from Comet Core α to
+                  the Warp Gate</p>
+              </div>
+            </div>
+            <!-- Star Rating Tier & Target Moves HUD -->
+            <div class="flex items-center gap-4">
+              <!-- Move Counter Capsule -->
+              <div class="flex items-center gap-2.5 px-3.5 py-1.5 rounded-xl bg-surface-container-low shadow-sm">
+                <svg class="w-7 h-7 -rotate-90" viewbox="0 0 36 36">
+                  <circle class="stroke-surface-variant" cx="18" cy="18" fill="none" r="14" stroke-width="3"></circle>
+                  <circle class="stroke-primary-container transition-all duration-300" cx="18" cy="18" fill="none"
+                    id="moveProgressRing" r="14" stroke-dasharray="88" stroke-dashoffset="38" stroke-linecap="round"
+                    stroke-width="3"></circle>
+                </svg>
+                <div class="flex flex-col">
+                  <span class="font-label-md text-[10px] uppercase tracking-wider text-stardust-muted">Moves</span>
+                  <div class="flex items-baseline gap-1">
+                    <span class="font-label-counter text-energy-cyan text-lg leading-none" id="moveCountText">6</span>
+                    <span class="text-stardust-muted text-xs font-label-md">/ 14 Par</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Constellation Stars -->
+              <div class="flex items-center gap-1 bg-surface-container-low px-3 py-1.5 rounded-xl">
+                <span
+                  class="material-symbols-outlined text-celestial-node text-[20px] drop-shadow-[0_0_8px_rgba(250,204,21,0.7)]"
+                  style="font-variation-settings: 'FILL' 1;">star</span>
+                <span
+                  class="material-symbols-outlined text-celestial-node text-[20px] drop-shadow-[0_0_8px_rgba(250,204,21,0.7)]"
+                  style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-outline-variant text-[20px]">star</span>
+              </div>
+            </div>
+          </div>
+          <!-- Live Stream Energy Sync Bar -->
+          <div
+            class="w-full bg-surface-container-lowest/80 backdrop-blur-md rounded-xl p-3 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-md">
+            <div class="flex items-center gap-2.5 w-full sm:w-auto">
+              <div class="w-2.5 h-2.5 rounded-full bg-energy-cyan animate-ping"></div>
+              <span class="font-label-md text-xs tracking-wider uppercase text-on-surface-variant font-bold">Stream
+                Integrity:</span>
+              <span class="font-label-counter text-energy-cyan text-sm tracking-wide" id="integrityPctText">75%
+                CONNECTED</span>
+            </div>
+            <div
+              class="w-full sm:flex-1 max-w-md bg-surface-container-highest rounded-full h-2.5 overflow-hidden p-0.5 shadow-inner">
+              <div
+                class="h-full rounded-full bg-gradient-to-r from-energy-flow via-energy-cyan to-primary-fixed shadow-[0_0_12px_rgba(0,242,254,0.8)] transition-all duration-500"
+                id="integrityBar" style="width: 75%"></div>
+            </div>
+            <div class="hidden md:flex items-center gap-1.5 text-starlight-coral font-label-md text-xs">
+              <span class="material-symbols-outlined text-sm">bolt</span>
+              <span>1 Tile Off Target</span>
+            </div>
+          </div>
+        </header>
+        <!-- 2. MAIN CENTER MATRIX + ASTRA COMPANION -->
+        <div class="w-full max-w-5xl my-4 flex flex-col lg:flex-row items-center justify-center gap-6 relative">
+          <!-- LEFT FLANK: Cosmic Mascot Companion "Astra" -->
+          <div
+            class="order-2 lg:order-1 flex lg:flex-col items-center gap-4 bg-surface-glass/90 backdrop-blur-lg rounded-2xl p-4 max-w-sm w-full lg:w-60 shadow-[0_8px_24px_rgba(0,0,0,0.4)]">
+            <!-- Floating Animated Celestial Core -->
+            <div class="relative w-16 h-16 flex-shrink-0 flex items-center justify-center">
+              <div
+                class="absolute inset-0 rounded-full bg-gradient-to-tr from-nebula-violet via-energy-cyan to-celestial-node animate-pulse opacity-40 blur-md">
+              </div>
+              <div
+                class="relative w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center shadow-lg">
+                <!-- 8-Star Inspired Mascot Avatar -->
+                <svg class="w-10 h-10 text-primary-container animate-[spin_12s_linear_infinite]" fill="none"
+                  viewbox="0 0 100 100">
+                  <path d="M50 5 L61 38 L95 38 L68 58 L78 92 L50 71 L22 92 L32 58 L5 38 L39 38 Z"
+                    fill="rgba(0, 242, 254, 0.2)" stroke="currentColor" stroke-linejoin="round" stroke-width="4"></path>
+                  <circle class="animate-ping opacity-75" cx="50" cy="50" fill="#FACC15" r="10"></circle>
+                  <circle cx="50" cy="50" fill="#F8FAFC" r="8"></circle>
+                </svg>
+              </div>
+              <span
+                class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-celestial-node border-2 border-space-void"></span>
+            </div>
+            <!-- Dialogue Bubble -->
+            <div class="flex-1 flex flex-col gap-1 text-left lg:text-center">
+              <div class="flex items-center justify-between lg:justify-center gap-2">
+                <span class="font-headline-md text-primary text-xs uppercase tracking-wider font-bold">Astra • Conduit
+                  Guide</span>
+                <span class="material-symbols-outlined text-energy-flow text-sm">auto_awesome</span>
+              </div>
+              <p class="font-body-md text-xs text-on-surface-variant leading-relaxed" id="astraSpeech">
+                “Almost there, Weaver! Rotate Node [2,3] once clockwise to bridge the gateway current.”
+              </p>
+            </div>
+          </div>
+          <!-- CENTER: THE TACTILE 4x4 CONDUIT CHAMBER -->
+          <div class="order-1 lg:order-2 relative flex flex-col items-center">
+            <!-- Comet Core Start Indicator (Top Left Anchor) -->
+            <div
+              class="absolute -top-6 -left-4 sm:-top-8 sm:-left-6 z-20 flex items-center gap-2 bg-surface-container-low/95 px-3 py-1.5 rounded-full shadow-[0_0_20px_rgba(250,204,21,0.5)]">
+              <div class="w-4 h-4 rounded-full bg-celestial-node animate-ping"></div>
+              <span class="font-label-md text-xs text-celestial-node font-bold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">flare</span> START: COMET SPARK
+              </span>
+            </div>
+            <!-- Warp Gateway End Indicator (Bottom Right Anchor) -->
+            <div
+              class="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-6 z-20 flex items-center gap-2 bg-surface-container-low/95 px-3 py-1.5 rounded-full shadow-[0_0_25px_rgba(168,85,247,0.7)]">
+              <span class="font-label-md text-xs text-secondary-fixed font-bold flex items-center gap-1">
+                GATEWAY TARGET <span class="material-symbols-outlined text-[14px]">cyclone</span>
+              </span>
+              <div class="w-4 h-4 rounded-full bg-nebula-violet animate-spin"></div>
+            </div>
+            <!-- Chamber Glass Board Frame -->
+            <div
+              class="p-3 sm:p-5 rounded-3xl bg-surface-container-lowest/85 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)] relative">
+              <!-- Inner Ambient Glow Behind Grid -->
+              <div
+                class="absolute inset-0 bg-radial from-energy-cyan/5 via-transparent to-transparent pointer-events-none rounded-3xl">
+              </div>
+              <!-- 4x4 Playable Puzzle Grid -->
+              <div class="grid grid-cols-4 gap-2.5 sm:gap-3.5 w-[310px] sm:w-[420px] aspect-square relative z-10"
+                id="puzzleBoard">
+                <!-- TILE 0: Top-Left Start Origin (Connected) -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden"
+                  data-rot="0" data-tile-id="0" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">0,0</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <!-- Glowing corner conduit from Top to Right -->
+                    <path class="filter drop-shadow-[0_0_8px_#00F2FE]" d="M 50 0 L 50 50 L 100 50" fill="none"
+                      stroke="#00F2FE" stroke-linecap="round" stroke-width="12"></path>
+                    <circle class="filter drop-shadow-[0_0_6px_#00F2FE]" cx="50" cy="50" fill="#F8FAFC" r="7"></circle>
+                    <circle class="animate-ping" cx="90" cy="50" fill="#FACC15" r="3"></circle>
+                  </svg>
+                  <div
+                    class="absolute inset-0 bg-energy-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none">
+                  </div>
+                </button>
+                <!-- TILE 1: Straight horizontal (Connected) -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden"
+                  data-rot="0" data-tile-id="1" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">0,1</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <path class="filter drop-shadow-[0_0_8px_#00F2FE]" d="M 0 50 L 100 50" fill="none" stroke="#00F2FE"
+                      stroke-linecap="round" stroke-width="12"></path>
+                    <line class="animate-pulse" stroke="#FFFFFF" stroke-dasharray="8 6" stroke-width="3" x1="20" x2="80"
+                      y1="50" y2="50"></line>
+                  </svg>
+                </button>
+                <!-- TILE 2: 90 deg corner Turn (Connected) -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden"
+                  data-rot="0" data-tile-id="2" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">0,2</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <path class="filter drop-shadow-[0_0_8px_#00F2FE]" d="M 0 50 L 50 50 L 50 100" fill="none"
+                      stroke="#00F2FE" stroke-linecap="round" stroke-width="12"></path>
+                    <circle cx="50" cy="50" fill="#00F2FE" r="6"></circle>
+                  </svg>
+                </button>
+                <!-- TILE 3: Unconnected Dead-End / Reservoir -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100"
+                  data-rot="0" data-tile-id="3" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">0,3</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <path d="M 50 50 L 50 100" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10">
+                    </path>
+                    <circle cx="50" cy="50" fill="none" r="12" stroke="#3A494B" stroke-width="6"></circle>
+                  </svg>
+                </button>
+                <!-- TILE 4: Dormant Cross -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100"
+                  data-rot="0" data-tile-id="4" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">1,0</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <path d="M 50 0 L 50 100 M 0 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round"
+                      stroke-width="10"></path>
+                  </svg>
+                </button>
+                <!-- TILE 5: Dormant Elbow -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100"
+                  data-rot="180" data-tile-id="5" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">1,1</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out rotate-180"
+                    viewbox="0 0 100 100">
+                    <path d="M 0 50 L 50 50 L 50 100" fill="none" stroke="#3A494B" stroke-linecap="round"
+                      stroke-width="10"></path>
+                  </svg>
+                </button>
+                <!-- TILE 6: Vertical Active Conduit (Connected) -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden"
+                  data-rot="0" data-tile-id="6" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">1,2</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <path class="filter drop-shadow-[0_0_8px_#00F2FE]" d="M 50 0 L 50 100" fill="none" stroke="#00F2FE"
+                      stroke-linecap="round" stroke-width="12"></path>
+                    <circle cx="50" cy="30" fill="#F8FAFC" r="4"></circle>
+                    <circle cx="50" cy="70" fill="#F8FAFC" r="4"></circle>
+                  </svg>
+                </button>
+                <!-- TILE 7: Dormant T-Junction -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100"
+                  data-rot="270" data-tile-id="7" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">1,3</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out -rotate-90"
+                    viewbox="0 0 100 100">
+                    <path d="M 50 0 L 50 100 M 50 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round"
+                      stroke-width="10"></path>
+                  </svg>
+                </button>
+                <!-- TILE 8: Straight Dormant -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100"
+                  data-rot="90" data-tile-id="8" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">2,0</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out rotate-90"
+                    viewbox="0 0 100 100">
+                    <path d="M 0 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10">
+                    </path>
+                  </svg>
+                </button>
+                <!-- TILE 9: Dormant Elbow -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100"
+                  data-rot="0" data-tile-id="9" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">2,1</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <path d="M 50 0 L 50 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round"
+                      stroke-width="10"></path>
+                  </svg>
+                </button>
+                <!-- TILE 10: T-Junction (Connected to stream) -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden"
+                  data-rot="0" data-tile-id="10" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">2,2</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <path class="filter drop-shadow-[0_0_8px_#00F2FE]" d="M 50 0 L 50 100 M 50 50 L 100 50" fill="none"
+                      stroke="#00F2FE" stroke-linecap="round" stroke-width="12"></path>
+                    <circle class="filter drop-shadow-[0_0_4px_#00F2FE]" cx="50" cy="50" fill="#F8FAFC" r="7"></circle>
+                  </svg>
+                </button>
+                <!-- TILE 11: MISALIGNED CRITICAL TILE (The missing link!) -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-high transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(255,94,126,0.3)] ring-2 ring-starlight-coral/60 animate-pulse flex items-center justify-center overflow-hidden cursor-pointer"
+                  data-rot="90" data-tile-id="11" id="criticalTile" type="button">
+                  <span
+                    class="absolute top-1 left-2 font-mono text-[9px] text-starlight-coral font-bold flex items-center gap-0.5">
+                    2,3 <span class="material-symbols-outlined text-[10px]">sync</span>
+                  </span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out rotate-90"
+                    viewbox="0 0 100 100">
+                    <!-- Misaligned elbow pointing away: needs 1 rotation to align! -->
+                    <path class="filter drop-shadow-[0_0_8px_#FF5E7E]" d="M 50 0 L 50 50 L 100 50" fill="none"
+                      stroke="#FF5E7E" stroke-linecap="round" stroke-width="12"></path>
+                    <circle cx="50" cy="50" fill="#FF5E7E" r="7"></circle>
+                  </svg>
+                  <!-- Rotation guide hint icon on hover -->
+                  <div
+                    class="absolute inset-0 bg-starlight-coral/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span
+                      class="material-symbols-outlined text-starlight-coral text-2xl animate-spin">rotate_right</span>
+                  </div>
+                </button>
+                <!-- TILE 12: Dormant Cross -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100"
+                  data-rot="0" data-tile-id="12" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">3,0</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <path d="M 50 0 L 50 100 M 0 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round"
+                      stroke-width="10"></path>
+                  </svg>
+                </button>
+                <!-- TILE 13: Dormant Straight -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100"
+                  data-rot="0" data-tile-id="13" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">3,1</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <path d="M 0 50 L 100 50" fill="none" stroke="#3A494B" stroke-linecap="round" stroke-width="10">
+                    </path>
+                  </svg>
+                </button>
+                <!-- TILE 14: Dormant Corner -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-container-low transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden opacity-75 hover:opacity-100"
+                  data-rot="0" data-tile-id="14" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">3,2</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <path d="M 0 50 L 50 50 L 50 0" fill="none" stroke="#3A494B" stroke-linecap="round"
+                      stroke-width="10"></path>
+                  </svg>
+                </button>
+                <!-- TILE 15: Bottom-Right Terminal to Warp Gate -->
+                <button
+                  class="tile-btn group relative aspect-square rounded-2xl bg-surface-glass transition-all duration-300 hover:scale-[1.03] active:scale-95 shadow-[0_4px_0_#070913,0_8px_20px_rgba(168,85,247,0.4)] flex items-center justify-center overflow-hidden"
+                  data-rot="0" data-tile-id="15" id="terminalTile" type="button">
+                  <span class="absolute top-1 left-2 font-mono text-[9px] text-stardust-muted/50 font-bold">3,3</span>
+                  <svg class="tile-svg w-full h-full p-2 transition-transform duration-300 ease-out"
+                    viewbox="0 0 100 100">
+                    <!-- Ready receiver terminal waiting for Top input -->
+                    <path class="filter drop-shadow-[0_0_8px_#A855F7]" d="M 50 0 L 50 50 L 100 50" fill="none"
+                      stroke="#A855F7" stroke-linecap="round" stroke-width="12"></path>
+                    <circle class="animate-ping opacity-50" cx="50" cy="50" fill="#A855F7" r="9"></circle>
+                    <circle cx="50" cy="50" fill="#F8FAFC" r="6"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- RIGHT FLANK: Galactic Codex Mini Lore & Score Multiplier -->
+          <div class="order-3 hidden lg:flex flex-col gap-3 w-60">
+            <!-- Energy Resonance Card -->
+            <div
+              class="bg-surface-glass/80 backdrop-blur-md rounded-2xl p-4 shadow-[0_8px_24px_rgba(0,0,0,0.4)] flex flex-col gap-2">
+              <div class="flex items-center gap-2 text-celestial-node">
+                <span class="material-symbols-outlined text-lg">bolt</span>
+                <span class="font-label-md text-xs uppercase tracking-wider font-bold">Resonance Bonus</span>
+              </div>
+              <div class="flex items-baseline gap-1">
+                <span class="font-headline-xl text-star-white text-2xl font-bold">2.4x</span>
+                <span class="text-xs text-stardust-muted">Stardust Mult</span>
+              </div>
+              <p class="font-body-sm text-[11px] text-stardust-muted leading-tight">
+                Connecting conduits within Par count preserves the constellation's pure cosmic harmonic.
+              </p>
+            </div>
+            <!-- Starlight Node Mini Codex -->
+            <div class="bg-surface-container-low/70 rounded-2xl p-3 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-secondary-container/40 flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-[20px]">explore</span>
+              </div>
+              <div>
+                <span class="font-label-md text-[11px] text-primary block font-bold">Astral Codex § 44</span>
+                <span class="font-body-sm text-[11px] text-stardust-muted">Polarity: Cyan → Violet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 3. TACTILE ARCADE BOTTOM DOCK CONTROLS -->
+        <footer class="w-full max-w-3xl flex flex-col items-center gap-3 pt-2 pb-4">
+          <!-- Primary Interactive Button Row -->
+          <div
+            class="w-full flex items-center justify-center sm:justify-between flex-wrap gap-3 bg-surface-glass/90 backdrop-blur-xl p-3 rounded-2xl shadow-[0_12px_36px_rgba(0,0,0,0.6)]">
+            <!-- Left Sub-actions (Undo & Restart) -->
+            <div class="flex items-center gap-2">
+              <button
+                class="group px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-xs sm:text-sm flex items-center gap-2 transition-all active:translate-y-0.5 shadow-sm"
+                id="undoBtn" type="button">
+                <span
+                  class="material-symbols-outlined text-primary text-[18px] group-hover:-rotate-45 transition-transform">undo</span>
+                <span>Undo</span>
+                <kbd
+                  class="hidden sm:inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-[10px] text-stardust-muted font-mono font-bold">Z</kbd>
+              </button>
+              <button
+                class="group px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-xs sm:text-sm flex items-center gap-2 transition-all active:translate-y-0.5 shadow-sm"
+                id="restartBtn" type="button">
+                <span
+                  class="material-symbols-outlined text-starlight-coral text-[18px] group-hover:rotate-180 transition-transform duration-500">restart_alt</span>
+                <span>Reset</span>
+                <kbd
+                  class="hidden sm:inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-[10px] text-stardust-muted font-mono font-bold">R</kbd>
+              </button>
+            </div>
+            <!-- Center CTA: Solve / Hint Capsule -->
+            <div class="flex items-center gap-2">
+              <button
+                class="px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-variant text-star-white font-label-md text-xs sm:text-sm flex items-center gap-2.5 transition-all shadow-[0_4px_12px_rgba(0,0,0,0.4)]"
+                id="hintBtn" type="button">
+                <span class="material-symbols-outlined text-celestial-node text-[20px] animate-bounce">lightbulb</span>
+                <span>Cosmic Hint</span>
+                <span class="px-2 py-0.5 rounded-full bg-celestial-node/20 text-celestial-node font-bold text-[11px]"
+                  id="hintBadge">2 left</span>
+              </button>
+              <!-- Audio & Ambient Toggle -->
+              <button aria-label="Toggle Synth Audio"
+                class="w-10 h-10 rounded-xl bg-surface-container hover:bg-surface-container-high text-energy-cyan flex items-center justify-center transition-all shadow-sm"
+                id="soundToggle" type="button">
+                <span class="material-symbols-outlined text-[20px]">music_note</span>
+              </button>
+            </div>
+          </div>
+          <!-- Quick Accessibility Keyboard Guide Pill -->
+          <div class="flex items-center gap-3 text-stardust-muted text-[11px] font-label-md">
+            <span class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[13px] text-energy-cyan">touch_app</span> Click / Space to
+              Rotate
+            </span>
+            <span>•</span>
+            <span class="flex items-center gap-1">
+              <kbd class="px-1 rounded bg-surface-container text-[10px] font-mono">H</kbd> Hint
+            </span>
+            <span>•</span>
+            <span class="flex items-center gap-1">
+              <kbd class="px-1 rounded bg-surface-container text-[10px] font-mono">Z</kbd> Undo
+            </span>
+            <span>•</span>
+            <span class="flex items-center gap-1">
+              <kbd class="px-1 rounded bg-surface-container text-[10px] font-mono">R</kbd> Restart
+            </span>
+          </div>
+        </footer>
+      </div>
+      <!-- VICTORY PORTAL MODAL (Reveals on 100% circuit alignment) -->
+      <div
+        class="fixed inset-0 z-50 flex items-center justify-center bg-space-void/80 backdrop-blur-2xl opacity-0 pointer-events-none transition-all duration-500 p-4"
+        id="victoryModal">
+        <div
+          class="relative w-full max-w-md bg-surface-glass rounded-3xl p-6 sm:p-8 shadow-[0_0_60px_rgba(0,242,254,0.4)] text-center flex flex-col items-center gap-5">
+          <!-- Luminous Radial Badge -->
+          <div class="relative w-24 h-24 flex items-center justify-center">
+            <div
+              class="absolute inset-0 rounded-full bg-gradient-to-r from-energy-cyan to-nebula-violet animate-spin opacity-70 blur-lg">
+            </div>
+            <div class="relative w-20 h-20 rounded-full bg-surface-container-lowest flex items-center justify-center">
+              <span class="material-symbols-outlined text-energy-cyan text-[42px] animate-bounce">auto_mode</span>
+            </div>
+          </div>
+          <!-- Complete Message -->
+          <div>
+            <span class="font-label-md text-xs tracking-widest text-energy-cyan uppercase font-bold">Conduit
+              Aligned!</span>
+            <h2 class="font-display-hero text-2xl sm:text-display-hero tracking-tight text-star-white font-bold mt-1">
+              STARSTREAM HARMONIZED</h2>
+            <p class="font-body-md text-xs text-stardust-muted mt-2">
+              The Comet's stardust pulses freely through Sector Lyra. The cosmic warp portal has opened!
+            </p>
+          </div>
+          <!-- Metrics Breakdown -->
+          <div class="w-full grid grid-cols-3 gap-2 bg-surface-container-low rounded-2xl p-3">
+            <div class="flex flex-col items-center">
+              <span class="font-body-sm text-[10px] uppercase text-stardust-muted font-bold">Moves</span>
+              <span class="font-label-counter text-energy-cyan text-lg font-bold" id="victoryMovesText">7 / 14</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="font-body-sm text-[10px] uppercase text-stardust-muted font-bold">Rating</span>
+              <div class="flex text-celestial-node" id="victoryStarsContainer">
+                <span class="material-symbols-outlined text-[16px]"
+                  style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="font-body-sm text-[10px] uppercase text-stardust-muted font-bold">Score</span>
+              <span class="font-label-counter text-celestial-node text-lg font-bold" id="victoryScoreText">+1,850</span>
+            </div>
+          </div>
+          <!-- Action Buttons -->
+          <div class="w-full flex flex-col gap-2.5">
+            <button
+              class="w-full py-3.5 rounded-xl bg-gradient-to-r from-energy-flow to-energy-cyan text-space-void font-label-lg font-bold text-sm tracking-wide shadow-[0_6px_0_#0098a6,0_16px_30px_rgba(0,242,254,0.4)] hover:brightness-110 active:translate-y-1 active:shadow-[0_2px_0_#0098a6] transition-all flex items-center justify-center gap-2"
+              id="nextPortalBtn" type="button">
+              <span>ENTER LEVEL 05 PORTAL</span>
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+            <button
+              class="w-full py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-stardust-muted hover:text-star-white font-label-md text-xs transition-colors"
+              id="replayBtn" type="button">
+              Replay Constellation
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- INTERACTIVE PLAY ENGINE JAVASCRIPT -->
+      <script>
+        (function initStarweaver() {
+          // Directions: 0 = North, 1 = East, 2 = South, 3 = West
+          const OPPOSITE = [2, 3, 0, 1];
+          const DR = [-1, 0, 1, 0];
+          const DC = [0, 1, 0, -1];
 
-      function updateMoves(delta = 1) {
-        moveCount += delta;
-        if (moveCountText) moveCountText.textContent = moveCount;
-        
-        if (moveProgressRing) {
-          const circumference = 88;
-          const ratio = Math.min(moveCount / maxPar, 1);
-          const offset = circumference - (circumference * ratio);
-          moveProgressRing.style.strokeDashoffset = offset;
-          
-          if (moveCount > maxPar) {
-            moveProgressRing.classList.remove('stroke-primary-container');
-            moveProgressRing.classList.add('stroke-starlight-coral');
+          // Base ports for each tile in unrotated (0 deg) orientation
+          const BASE_PORTS = [
+            [0, 1],       // Tile 0 (0,0): Top-Right corner (Source enters at North)
+            [1, 3],       // Tile 1 (0,1): Horizontal straight
+            [2, 3],       // Tile 2 (0,2): Left-Bottom corner
+            [2],          // Tile 3 (0,3): South dead-end
+            [0, 1, 2, 3], // Tile 4 (1,0): 4-way cross
+            [2, 3],       // Tile 5 (1,1): Left-Bottom corner
+            [0, 2],       // Tile 6 (1,2): Vertical straight
+            [0, 1, 2],    // Tile 7 (1,3): T-junction (North, East, South)
+            [1, 3],       // Tile 8 (2,0): Horizontal straight
+            [0, 1],       // Tile 9 (2,1): Top-Right corner
+            [0, 1, 2],    // Tile 10 (2,2): T-junction (North, East, South)
+            [0, 1],       // Tile 11 (2,3): Elbow (at 90 deg initial = East & South; at 180 deg = South & West)
+            [0, 1, 2, 3], // Tile 12 (3,0): 4-way cross
+            [1, 3],       // Tile 13 (3,1): Horizontal straight
+            [0, 3],       // Tile 14 (3,2): Top-Left corner
+            [0, 1]        // Tile 15 (3,3): Top-Right corner (Exits East to Portal)
+          ];
+
+          // Optimal conduit path from Source to Warp Portal
+          const SOLUTION_PATH = [0, 1, 2, 6, 10, 11, 15];
+
+          // Initial Level 04 State
+          const INITIAL_STATE = {
+            rotations: [0, 0, 0, 0, 0, 180, 0, 270, 90, 0, 0, 90, 0, 0, 0, 0],
+            moveCount: 6,
+            maxPar: 14,
+            hintsRemaining: 2
+          };
+
+          let moveCount = INITIAL_STATE.moveCount;
+          const maxPar = INITIAL_STATE.maxPar;
+          let hintsRemaining = INITIAL_STATE.hintsRemaining;
+          let historyStack = [];
+          let isSolved = false;
+          let energizedSet = new Set();
+          let lastEnergizedCount = 5;
+
+          // DOM Elements
+          const board = document.getElementById('puzzleBoard');
+          const allTiles = Array.from(document.querySelectorAll('.tile-btn'));
+          const criticalTile = document.getElementById('criticalTile');
+          const terminalTile = document.getElementById('terminalTile');
+          const moveCountText = document.getElementById('moveCountText');
+          const moveProgressRing = document.getElementById('moveProgressRing');
+          const integrityBar = document.getElementById('integrityBar');
+          const integrityPctText = document.getElementById('integrityPctText');
+          const astraSpeech = document.getElementById('astraSpeech');
+          const victoryModal = document.getElementById('victoryModal');
+          const undoBtn = document.getElementById('undoBtn');
+          const restartBtn = document.getElementById('restartBtn');
+          const hintBtn = document.getElementById('hintBtn');
+          const hintBadge = document.getElementById('hintBadge');
+          const soundToggle = document.getElementById('soundToggle');
+          const headerAudioBtn = document.getElementById('headerAudioBtn');
+          const replayBtn = document.getElementById('replayBtn');
+          const nextPortalBtn = document.getElementById('nextPortalBtn');
+          const victoryMovesText = document.getElementById('victoryMovesText');
+          const victoryStarsContainer = document.getElementById('victoryStarsContainer');
+          const victoryScoreText = document.getElementById('victoryScoreText');
+
+          // ----------------------------------------------------
+          // WEB AUDIO API ENGINE
+          // ----------------------------------------------------
+          let audioCtx = null;
+          let isMuted = false;
+
+          function getAudioContext() {
+            if (!audioCtx) {
+              const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+              if (AudioContextClass) {
+                audioCtx = new AudioContextClass();
+              }
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+              audioCtx.resume();
+            }
+            return audioCtx;
           }
-        }
-      }
 
-      function handleTileRotate(tile) {
-        if (!tile || isSolved) return;
-        
-        const currentRot = parseInt(tile.getAttribute('data-rot') || '0', 10);
-        const nextRot = (currentRot + 90) % 360;
-        
-        historyStack.push({ tile, prevRot: currentRot });
-        tile.setAttribute('data-rot', nextRot);
-        
-        const svg = tile.querySelector('.tile-svg');
-        if (svg) {
-          svg.style.transform = `rotate(${nextRot}deg)`;
-        }
+          function playSound(type) {
+            if (isMuted) return;
+            const ctx = getAudioContext();
+            if (!ctx) return;
 
-        updateMoves(1);
+            const now = ctx.currentTime;
 
-        // Check if critical tile solved
-        if (tile.id === 'criticalTile') {
-          // If rotated to 180 degrees (one turn from initial 90deg), bridge connects!
-          if (nextRot === 180) {
-            triggerFullConnection();
-          } else {
-            revertDisconnection();
-          }
-        }
-      }
+            if (type === 'rotate') {
+              // Crisp celestial click/rotation
+              const osc = ctx.createOscillator();
+              const gain = ctx.createGain();
+              osc.type = 'triangle';
+              osc.frequency.setValueAtTime(520, now);
+              osc.frequency.exponentialRampToValueAtTime(740, now + 0.05);
 
-      function triggerFullConnection() {
-        isSolved = true;
-        
-        // Update Critical Tile aesthetics to fully energised Cyan
-        if (criticalTile) {
-          criticalTile.classList.remove('ring-2', 'ring-starlight-coral/60', 'animate-pulse');
-          criticalTile.classList.add('shadow-[0_0_24px_rgba(0,242,254,0.8)]');
-          const p = criticalTile.querySelector('path');
-          if (p) {
-            p.setAttribute('stroke', '#00F2FE');
-            p.setAttribute('class', 'filter drop-shadow-[0_0_12px_#00F2FE]');
-          }
-          const c = criticalTile.querySelector('circle');
-          if (c) c.setAttribute('fill', '#00F2FE');
-        }
+              gain.gain.setValueAtTime(0.12, now);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
 
-        // Energize Terminal Tile
-        if (terminalTile) {
-          terminalTile.classList.add('shadow-[0_0_30px_rgba(0,242,254,0.9)]');
-          const termPath = terminalTile.querySelector('path');
-          if (termPath) {
-            termPath.setAttribute('stroke', '#00F2FE');
-            termPath.setAttribute('class', 'filter drop-shadow-[0_0_12px_#00F2FE]');
-          }
-        }
+              osc.connect(gain);
+              gain.connect(ctx.destination);
+              osc.start(now);
+              osc.stop(now + 0.055);
+            } else if (type === 'connect') {
+              // Harmonic warm two-tone chime
+              [659.25, 987.77].forEach((freq, idx) => {
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, now + idx * 0.04);
 
-        // Integrity Bar to 100%
-        if (integrityBar) integrityBar.style.width = '100%';
-        if (integrityPctText) {
-          integrityPctText.textContent = '100% HARMONIZED';
-          integrityPctText.classList.remove('text-energy-cyan');
-          integrityPctText.classList.add('text-celestial-node');
-        }
+                gain.gain.setValueAtTime(0.15, now + idx * 0.04);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.04 + 0.28);
 
-        // Astra ecstatic dialog
-        if (astraSpeech) {
-          astraSpeech.innerHTML = '&ldquo;ASTOUNDING! The stream is whole! Sector Lyra shines across the cosmos!&rdquo;';
-        }
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start(now + idx * 0.04);
+                osc.stop(now + idx * 0.04 + 0.3);
+              });
+            } else if (type === 'undo') {
+              // Soft descending tone
+              const osc = ctx.createOscillator();
+              const gain = ctx.createGain();
+              osc.type = 'sine';
+              osc.frequency.setValueAtTime(480, now);
+              osc.frequency.exponentialRampToValueAtTime(320, now + 0.08);
 
-        // Show victory modal after brief cosmic chime delay
-        setTimeout(() => {
-          if (victoryModal) {
-            victoryModal.classList.remove('opacity-0', 'pointer-events-none');
-            victoryModal.classList.add('opacity-100', 'pointer-events-auto');
-          }
-        }, 650);
-      }
+              gain.gain.setValueAtTime(0.1, now);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
 
-      function revertDisconnection() {
-        isSolved = false;
-        if (criticalTile) {
-          criticalTile.classList.add('ring-2', 'ring-starlight-coral/60');
-          const p = criticalTile.querySelector('path');
-          if (p) {
-            p.setAttribute('stroke', '#FF5E7E');
-            p.removeAttribute('class');
-          }
-        }
-        if (integrityBar) integrityBar.style.width = '75%';
-        if (integrityPctText) integrityPctText.textContent = '75% CONNECTED';
-      }
+              osc.connect(gain);
+              gain.connect(ctx.destination);
+              osc.start(now);
+              osc.stop(now + 0.085);
+            } else if (type === 'reset') {
+              // Cosmic sweep chime
+              const osc = ctx.createOscillator();
+              const gain = ctx.createGain();
+              osc.type = 'triangle';
+              osc.frequency.setValueAtTime(380, now);
+              osc.frequency.exponentialRampToValueAtTime(680, now + 0.1);
+              osc.frequency.exponentialRampToValueAtTime(420, now + 0.22);
 
-      // Attach clicks to all tiles
-      document.querySelectorAll('.tile-btn').forEach(btn => {
-        btn.addEventListener('click', () => handleTileRotate(btn));
-      });
+              gain.gain.setValueAtTime(0.12, now);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.22);
 
-      // Undo functionality
-      if (undoBtn) {
-        undoBtn.addEventListener('click', () => {
-          if (historyStack.length === 0 || isSolved) return;
-          const last = historyStack.pop();
-          last.tile.setAttribute('data-rot', last.prevRot);
-          const svg = last.tile.querySelector('.tile-svg');
-          if (svg) svg.style.transform = `rotate(${last.prevRot}deg)`;
-          updateMoves(-1);
-          if (last.tile.id === 'criticalTile') revertDisconnection();
-        });
-      }
+              osc.connect(gain);
+              gain.connect(ctx.destination);
+              osc.start(now);
+              osc.stop(now + 0.23);
+            } else if (type === 'hint') {
+              // Lightbulb mystery chime
+              [587.33, 880].forEach((freq, idx) => {
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, now + idx * 0.06);
 
-      // Restart Board
-      if (restartBtn) {
-        restartBtn.addEventListener('click', () => {
-          historyStack = [];
-          moveCount = 0;
-          updateMoves(0);
-          isSolved = false;
-          if (criticalTile) {
-            criticalTile.setAttribute('data-rot', '90');
-            const svg = criticalTile.querySelector('.tile-svg');
-            if (svg) svg.style.transform = 'rotate(90deg)';
-            revertDisconnection();
-          }
-        });
-      }
+                gain.gain.setValueAtTime(0.14, now + idx * 0.06);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.06 + 0.2);
 
-      // Hint trigger
-      if (hintBtn) {
-        hintBtn.addEventListener('click', () => {
-          if (criticalTile && !isSolved) {
-            criticalTile.classList.add('scale-110');
-            setTimeout(() => criticalTile.classList.remove('scale-110'), 400);
-            if (astraSpeech) {
-              astraSpeech.innerHTML = '&ldquo;Tap the flashing coral node [2,3] once clockwise to link the current!&rdquo;';
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start(now + idx * 0.06);
+                osc.stop(now + idx * 0.06 + 0.22);
+              });
+            } else if (type === 'victory') {
+              // Triumphant ascending cosmic fanfare (C5, E5, G5, B5, C6)
+              const notes = [523.25, 659.25, 783.99, 987.77, 1046.50];
+              notes.forEach((freq, idx) => {
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(freq, now + idx * 0.1);
+
+                gain.gain.setValueAtTime(0.18, now + idx * 0.1);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.1 + 0.6);
+
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start(now + idx * 0.1);
+                osc.stop(now + idx * 0.1 + 0.65);
+              });
             }
           }
-        });
-      }
 
-      // Modal reset/close
-      if (replayBtn) {
-        replayBtn.addEventListener('click', () => {
-          if (victoryModal) {
-            victoryModal.classList.add('opacity-0', 'pointer-events-none');
-            victoryModal.classList.remove('opacity-100', 'pointer-events-auto');
+          function toggleMute() {
+            isMuted = !isMuted;
+            if (!isMuted) {
+              getAudioContext();
+              playSound('rotate');
+            }
+
+            const audioIcon = isMuted ? 'volume_off' : 'volume_up';
+            const musicIcon = isMuted ? 'music_off' : 'music_note';
+
+            if (headerAudioBtn) {
+              const icon = headerAudioBtn.querySelector('.material-symbols-outlined');
+              if (icon) icon.textContent = audioIcon;
+              headerAudioBtn.setAttribute('aria-label', isMuted ? 'Unmute Audio' : 'Mute Audio');
+              headerAudioBtn.classList.toggle('text-starlight-coral', isMuted);
+            }
+
+            if (soundToggle) {
+              const icon = soundToggle.querySelector('.material-symbols-outlined');
+              if (icon) icon.textContent = musicIcon;
+              soundToggle.setAttribute('aria-label', isMuted ? 'Unmute Synth Audio' : 'Mute Synth Audio');
+              soundToggle.classList.toggle('text-stardust-muted', isMuted);
+              soundToggle.classList.toggle('text-energy-cyan', !isMuted);
+            }
           }
-          if (restartBtn) restartBtn.click();
-        });
-      }
 
-      if (nextPortalBtn) {
-        nextPortalBtn.addEventListener('click', () => {
-          alert('Warping to Sector Cygnus &bull; Level 05: Pulsar Gateway!');
-          if (victoryModal) {
-            victoryModal.classList.add('opacity-0', 'pointer-events-none');
-            victoryModal.classList.remove('opacity-100', 'pointer-events-auto');
+          if (headerAudioBtn) headerAudioBtn.addEventListener('click', toggleMute);
+          if (soundToggle) soundToggle.addEventListener('click', toggleMute);
+
+          // ----------------------------------------------------
+          // PATH VALIDATION & CIRCUIT SIMULATION
+          // ----------------------------------------------------
+          function getActivePorts(tileId, rotDeg) {
+            const k = Math.floor(((rotDeg % 360) + 360) % 360 / 90);
+            return BASE_PORTS[tileId].map(dir => (dir + k) % 4);
           }
-        });
-      }
 
-      // Keyboard Controls
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'z' || e.key === 'Z') {
-          if (undoBtn) undoBtn.click();
-        } else if (e.key === 'r' || e.key === 'R') {
-          if (restartBtn) restartBtn.click();
-        } else if (e.key === 'h' || e.key === 'H') {
-          if (hintBtn) hintBtn.click();
-        } else if (e.key === ' ' || e.code === 'Space') {
-          e.preventDefault();
-          if (criticalTile) criticalTile.click();
-        }
-      });
+          function getBoardRotations() {
+            return allTiles.map(t => parseInt(t.getAttribute('data-rot') || '0', 10));
+          }
 
-    })();
-  </script>
-</div></main><footer class="w-full bg-surface-container-lowest py-space-md shadow-[0_-4px_20px_rgba(0,0,0,0.4)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left"><div class="flex items-center gap-space-xs font-label-md text-label-md text-stardust-muted"><span class="material-symbols-outlined text-energy-cyan text-[18px]">terminal</span><span>CONDUIT RELAY ONLINE</span><span class="text-outline-variant">•</span><span class="text-starlight-coral">SYNAPSE FREQ: 144Hz</span></div><div class="text-stardust-muted font-body-sm text-body-sm">© 2025 STARWEAVER Arcade Protocol. Celestial Conduit System.</div></div></footer></body></html>
+          function calculateCircuit() {
+            const rotations = getBoardRotations();
+            const energized = new Set();
+            let reachesPortal = false;
+
+            // Source enters Tile 0 at North (direction 0)
+            const tile0Ports = getActivePorts(0, rotations[0]);
+            if (tile0Ports.includes(0)) {
+              energized.add(0);
+              const queue = [0];
+
+              while (queue.length > 0) {
+                const curr = queue.shift();
+                const r = Math.floor(curr / 4);
+                const c = curr % 4;
+                const ports = getActivePorts(curr, rotations[curr]);
+
+                // Portal terminal check: Tile 15 exiting East (direction 1)
+                if (curr === 15 && ports.includes(1)) {
+                  reachesPortal = true;
+                }
+
+                for (const p of ports) {
+                  const nr = r + DR[p];
+                  const nc = c + DC[p];
+                  if (nr >= 0 && nr < 4 && nc >= 0 && nc < 4) {
+                    const neighborId = nr * 4 + nc;
+                    const neighborPorts = getActivePorts(neighborId, rotations[neighborId]);
+                    const requiredPort = OPPOSITE[p];
+
+                    if (neighborPorts.includes(requiredPort) && !energized.has(neighborId)) {
+                      energized.add(neighborId);
+                      queue.push(neighborId);
+                    }
+                  }
+                }
+              }
+            }
+
+            return { energized, reachesPortal };
+          }
+
+          function renderCircuit(forceCheckVictory = true) {
+            const { energized, reachesPortal } = calculateCircuit();
+            energizedSet = energized;
+
+            // Sound trigger if new conduits linked
+            if (energized.size > lastEnergizedCount && !reachesPortal) {
+              playSound('connect');
+            }
+            lastEnergizedCount = energized.size;
+
+            // Update aesthetics for all tiles
+            allTiles.forEach(tile => {
+              const id = parseInt(tile.getAttribute('data-tile-id'), 10);
+              const isEnergized = energized.has(id);
+              const path = tile.querySelector('path');
+              const circle = tile.querySelector('circle:not(.animate-ping)');
+
+              if (isEnergized) {
+                tile.classList.add('bg-surface-glass');
+                tile.classList.remove('bg-surface-container-low', 'opacity-75', 'opacity-80');
+                if (path) {
+                  path.setAttribute('stroke', '#00F2FE');
+                  path.setAttribute('class', 'filter drop-shadow-[0_0_8px_#00F2FE]');
+                }
+                if (circle) circle.setAttribute('fill', '#00F2FE');
+              } else {
+                tile.classList.remove('bg-surface-glass');
+                tile.classList.add('bg-surface-container-low', 'opacity-80');
+                if (path) {
+                  path.setAttribute('stroke', '#3A494B');
+                  path.removeAttribute('class');
+                }
+                if (circle) circle.setAttribute('fill', '#3A494B');
+              }
+            });
+
+            // Critical Tile specific styling (if not energized, maintain warning coral indicator)
+            if (criticalTile) {
+              const isCriticalEnergized = energized.has(11);
+              if (isCriticalEnergized) {
+                criticalTile.classList.remove('ring-2', 'ring-starlight-coral/60', 'animate-pulse');
+                criticalTile.classList.add('shadow-[0_0_24px_rgba(0,242,254,0.8)]');
+                const p = criticalTile.querySelector('path');
+                if (p) {
+                  p.setAttribute('stroke', '#00F2FE');
+                  p.setAttribute('class', 'filter drop-shadow-[0_0_12px_#00F2FE]');
+                }
+                const c = criticalTile.querySelector('circle');
+                if (c) c.setAttribute('fill', '#00F2FE');
+              } else {
+                criticalTile.classList.add('ring-2', 'ring-starlight-coral/60');
+                criticalTile.classList.remove('shadow-[0_0_24px_rgba(0,242,254,0.8)]');
+                const p = criticalTile.querySelector('path');
+                if (p) {
+                  p.setAttribute('stroke', '#FF5E7E');
+                  p.setAttribute('class', 'filter drop-shadow-[0_0_8px_#FF5E7E]');
+                }
+                const c = criticalTile.querySelector('circle');
+                if (c) c.setAttribute('fill', '#FF5E7E');
+              }
+            }
+
+            // Terminal Tile specific styling
+            if (terminalTile) {
+              const isTermEnergized = energized.has(15);
+              const termPath = terminalTile.querySelector('path');
+              if (isTermEnergized && reachesPortal) {
+                terminalTile.classList.add('shadow-[0_0_30px_rgba(0,242,254,0.9)]');
+                if (termPath) {
+                  termPath.setAttribute('stroke', '#00F2FE');
+                  termPath.setAttribute('class', 'filter drop-shadow-[0_0_12px_#00F2FE]');
+                }
+              } else {
+                terminalTile.classList.remove('shadow-[0_0_30px_rgba(0,242,254,0.9)]');
+                if (termPath) {
+                  termPath.setAttribute('stroke', '#A855F7');
+                  termPath.setAttribute('class', 'filter drop-shadow-[0_0_8px_#A855F7]');
+                }
+              }
+            }
+
+            // Integrity Bar update based on progress along the 7 solution nodes
+            let connectedSolutionNodes = 0;
+            SOLUTION_PATH.forEach(id => {
+              if (energized.has(id)) connectedSolutionNodes++;
+            });
+
+            const integrityPct = reachesPortal ? 100 : Math.round((connectedSolutionNodes / SOLUTION_PATH.length) * 100);
+
+            if (integrityBar) integrityBar.style.width = integrityPct + '%';
+            if (integrityPctText) {
+              if (reachesPortal) {
+                integrityPctText.textContent = '100% HARMONIZED';
+                integrityPctText.classList.remove('text-energy-cyan');
+                integrityPctText.classList.add('text-celestial-node');
+              } else {
+                integrityPctText.textContent = `${integrityPct}% CONNECTED`;
+                integrityPctText.classList.remove('text-celestial-node');
+                integrityPctText.classList.add('text-energy-cyan');
+              }
+            }
+
+            // Victory State trigger
+            if (reachesPortal && forceCheckVictory && !isSolved) {
+              triggerFullConnection();
+            } else if (!reachesPortal && isSolved) {
+              revertDisconnection();
+            }
+
+            return { energized, reachesPortal };
+          }
+
+          function updateMoves(delta = 1) {
+            moveCount = Math.max(0, moveCount + delta);
+            if (moveCountText) moveCountText.textContent = moveCount;
+
+            if (moveProgressRing) {
+              const circumference = 88;
+              const ratio = Math.min(moveCount / maxPar, 1);
+              const offset = circumference - (circumference * ratio);
+              moveProgressRing.style.strokeDashoffset = offset;
+
+              if (moveCount > maxPar) {
+                moveProgressRing.classList.remove('stroke-primary-container');
+                moveProgressRing.classList.add('stroke-starlight-coral');
+              } else {
+                moveProgressRing.classList.remove('stroke-starlight-coral');
+                moveProgressRing.classList.add('stroke-primary-container');
+              }
+            }
+          }
+
+          function handleTileRotate(tile) {
+            if (!tile || isSolved) return;
+
+            // Push full state to undo stack before mutation
+            historyStack.push({
+              rotations: getBoardRotations(),
+              moveCount: moveCount,
+              hintsRemaining: hintsRemaining,
+              isSolved: isSolved
+            });
+
+            const currentRot = parseInt(tile.getAttribute('data-rot') || '0', 10);
+            const nextRot = (currentRot + 90) % 360;
+
+            tile.setAttribute('data-rot', nextRot);
+            const svg = tile.querySelector('.tile-svg');
+            if (svg) {
+              svg.style.transform = `rotate(${nextRot}deg)`;
+            }
+
+            updateMoves(1);
+            playSound('rotate');
+
+            renderCircuit(true);
+          }
+
+          function triggerFullConnection() {
+            isSolved = true;
+            playSound('victory');
+
+            if (astraSpeech) {
+              astraSpeech.innerHTML = '&ldquo;ASTOUNDING! The stream is whole! Sector Lyra shines across the cosmos!&rdquo;';
+            }
+
+            // Calculate victory metrics
+            if (victoryMovesText) {
+              victoryMovesText.textContent = `${moveCount} / ${maxPar}`;
+            }
+
+            if (victoryStarsContainer) {
+              let starCount = 3;
+              if (moveCount > maxPar + 4) starCount = 1;
+              else if (moveCount > maxPar) starCount = 2;
+
+              let starHtml = '';
+              for (let s = 0; s < 3; s++) {
+                if (s < starCount) {
+                  starHtml += `<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>`;
+                } else {
+                  starHtml += `<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>`;
+                }
+              }
+              victoryStarsContainer.innerHTML = starHtml;
+            }
+
+            if (victoryScoreText) {
+              const bonus = Math.max(0, (maxPar - moveCount) * 120);
+              const totalScore = 1850 + bonus;
+              victoryScoreText.textContent = `+${totalScore.toLocaleString()}`;
+            }
+
+            setTimeout(() => {
+              if (victoryModal && isSolved) {
+                victoryModal.classList.remove('opacity-0', 'pointer-events-none');
+                victoryModal.classList.add('opacity-100', 'pointer-events-auto');
+              }
+            }, 550);
+          }
+
+          function revertDisconnection() {
+            isSolved = false;
+            if (victoryModal) {
+              victoryModal.classList.add('opacity-0', 'pointer-events-none');
+              victoryModal.classList.remove('opacity-100', 'pointer-events-auto');
+            }
+          }
+
+          // Attach clicks to all tiles
+          allTiles.forEach(btn => {
+            btn.addEventListener('click', () => handleTileRotate(btn));
+          });
+
+          // ----------------------------------------------------
+          // UNDO CONTROLS (FULL BOARD RESTORATION)
+          // ----------------------------------------------------
+          function handleUndo() {
+            if (historyStack.length === 0) return;
+
+            const prev = historyStack.pop();
+            prev.rotations.forEach((rot, idx) => {
+              allTiles[idx].setAttribute('data-rot', rot);
+              const svg = allTiles[idx].querySelector('.tile-svg');
+              if (svg) svg.style.transform = `rotate(${rot}deg)`;
+            });
+
+            moveCount = prev.moveCount;
+            if (moveCountText) moveCountText.textContent = moveCount;
+            updateMoves(0);
+
+            hintsRemaining = prev.hintsRemaining;
+            if (hintBadge) hintBadge.textContent = `${hintsRemaining} left`;
+
+            isSolved = prev.isSolved;
+            if (!isSolved && victoryModal) {
+              victoryModal.classList.add('opacity-0', 'pointer-events-none');
+              victoryModal.classList.remove('opacity-100', 'pointer-events-auto');
+            }
+
+            playSound('undo');
+            renderCircuit(false);
+          }
+
+          if (undoBtn) undoBtn.addEventListener('click', handleUndo);
+
+          // ----------------------------------------------------
+          // RESET CONTROLS (FULL INITIAL STATE RESTORATION)
+          // ----------------------------------------------------
+          function handleReset() {
+            historyStack = [];
+            INITIAL_STATE.rotations.forEach((rot, idx) => {
+              allTiles[idx].setAttribute('data-rot', rot);
+              const svg = allTiles[idx].querySelector('.tile-svg');
+              if (svg) svg.style.transform = `rotate(${rot}deg)`;
+            });
+
+            moveCount = INITIAL_STATE.moveCount;
+            updateMoves(0);
+            hintsRemaining = INITIAL_STATE.hintsRemaining;
+            if (hintBadge) hintBadge.textContent = `${hintsRemaining} left`;
+
+            isSolved = false;
+            if (victoryModal) {
+              victoryModal.classList.add('opacity-0', 'pointer-events-none');
+              victoryModal.classList.remove('opacity-100', 'pointer-events-auto');
+            }
+
+            if (astraSpeech) {
+              astraSpeech.innerHTML = '&ldquo;Almost there, Weaver! Rotate Node [2,3] once clockwise to bridge the gateway current.&rdquo;';
+            }
+
+            playSound('reset');
+            renderCircuit(false);
+          }
+
+          if (restartBtn) restartBtn.addEventListener('click', handleReset);
+
+          // ----------------------------------------------------
+          // COSMIC HINT CALCULATION
+          // ----------------------------------------------------
+          function calculateNextValidMove() {
+            const currentRotations = getBoardRotations();
+
+            // Target rotations for the solution path [0, 1, 2, 6, 10, 11, 15]
+            const TARGET_ROTS = {
+              0: 0,
+              1: 0,
+              2: 0,
+              6: 0,
+              10: 0,
+              11: 180,
+              15: 0
+            };
+
+            // Find the first disconnected or misaligned tile along the solution path
+            for (const targetId of SOLUTION_PATH) {
+              const curRot = ((currentRotations[targetId] % 360) + 360) % 360;
+              const targetRot = TARGET_ROTS[targetId];
+
+              // Check if current rotation satisfies connection
+              const currentPorts = getActivePorts(targetId, curRot);
+              const targetPorts = getActivePorts(targetId, targetRot);
+
+              const matches = targetPorts.every(p => currentPorts.includes(p));
+              if (!matches) {
+                let turnsNeeded = 1;
+                while (turnsNeeded < 4) {
+                  const testRot = (curRot + turnsNeeded * 90) % 360;
+                  const testPorts = getActivePorts(targetId, testRot);
+                  if (targetPorts.every(p => testPorts.includes(p))) {
+                    break;
+                  }
+                  turnsNeeded++;
+                }
+                return { tileId: targetId, turnsNeeded: turnsNeeded % 4 };
+              }
+            }
+
+            return null;
+          }
+
+          function handleHint() {
+            if (isSolved) return;
+            playSound('hint');
+
+            const nextMove = calculateNextValidMove();
+            if (!nextMove) {
+              if (astraSpeech) {
+                astraSpeech.innerHTML = '&ldquo;The conduit is already aligned! Touch the node to activate!&rdquo;';
+              }
+              return;
+            }
+
+            const targetTile = allTiles[nextMove.tileId];
+            const r = Math.floor(nextMove.tileId / 4);
+            const c = nextMove.tileId % 4;
+
+            if (targetTile) {
+              targetTile.classList.add('ring-4', 'ring-celestial-node', 'scale-105', 'transition-all');
+              setTimeout(() => {
+                targetTile.classList.remove('ring-4', 'ring-celestial-node', 'scale-105');
+              }, 1200);
+            }
+
+            if (astraSpeech) {
+              if (nextMove.turnsNeeded === 1) {
+                astraSpeech.innerHTML = `&ldquo;Cosmic resonance detected! Rotate Node [${r},${c}] once clockwise to bridge the stream!&rdquo;`;
+              } else {
+                astraSpeech.innerHTML = `&ldquo;Cosmic resonance detected! Rotate Node [${r},${c}] ${nextMove.turnsNeeded} times clockwise to align!&rdquo;`;
+              }
+            }
+
+            if (hintsRemaining > 0) {
+              hintsRemaining--;
+              if (hintBadge) hintBadge.textContent = `${hintsRemaining} left`;
+            }
+          }
+
+          if (hintBtn) hintBtn.addEventListener('click', handleHint);
+
+          // Modal reset/replay
+          if (replayBtn) {
+            replayBtn.addEventListener('click', () => {
+              if (victoryModal) {
+                victoryModal.classList.add('opacity-0', 'pointer-events-none');
+                victoryModal.classList.remove('opacity-100', 'pointer-events-auto');
+              }
+              handleReset();
+            });
+          }
+
+          if (nextPortalBtn) {
+            nextPortalBtn.addEventListener('click', () => {
+              alert('Warping to Sector Cygnus • Level 05: Pulsar Gateway!');
+              if (victoryModal) {
+                victoryModal.classList.add('opacity-0', 'pointer-events-none');
+                victoryModal.classList.remove('opacity-100', 'pointer-events-auto');
+              }
+            });
+          }
+
+          // ----------------------------------------------------
+          // KEYBOARD SHORTCUTS
+          // ----------------------------------------------------
+          window.addEventListener('keydown', (e) => {
+            // Prevent default for game keys
+            if (e.key === 'z' || e.key === 'Z') {
+              handleUndo();
+            } else if (e.key === 'r' || e.key === 'R') {
+              handleReset();
+            } else if (e.key === 'h' || e.key === 'H') {
+              handleHint();
+            } else if (e.key === 'm' || e.key === 'M') {
+              toggleMute();
+            } else if (e.key === ' ' || e.code === 'Space') {
+              e.preventDefault();
+              const activeEl = document.activeElement;
+              if (activeEl && activeEl.classList.contains('tile-btn')) {
+                activeEl.click();
+              } else if (criticalTile && !isSolved) {
+                criticalTile.click();
+              }
+            }
+          });
+
+          // Initial validation on load
+          renderCircuit(false);
+        })();
+      </script>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-lowest py-space-md shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left">
+      <div class="flex items-center gap-space-xs font-label-md text-label-md text-stardust-muted"><span
+          class="material-symbols-outlined text-energy-cyan text-[18px]">terminal</span><span>CONDUIT RELAY
+          ONLINE</span><span class="text-outline-variant">•</span><span class="text-starlight-coral">SYNAPSE FREQ:
+          144Hz</span></div>
+      <div class="text-stardust-muted font-body-sm text-body-sm">© 2025 STARWEAVER Arcade Protocol. Celestial Conduit
+        System.</div>
+    </div>
+  </footer>
+</body>
+
+</html>
