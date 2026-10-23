@@ -49,3 +49,25 @@ The following genuine issues were identified in the Google Stitch export:
 - Output files modified: `index.html`, `AI_LOG.md`.
 - Automated Verification: Executed test suite (`scratch/run_tests.py`) in Google Chrome via Chrome DevTools Protocol (CDP), passing all 9 unit and integration tests across path validation, undo, reset, dynamic hint, audio mute, and victory states.
 
+## Mascot Asset Integration
+- Purpose: Safely integrate the new cosmic star mascot into the game's interface without server dependencies or gameplay disruption.
+- Date: 2026-10-23.
+- Selected Asset: `assets/mascot/south.png` (48×48px transparent PNG, front-facing celestial star).
+- Target Location: Header brand block (`<header>` &rarr; `<div class="flex items-center gap-space-sm">`), positioned directly beside the `STARWEAVER` title.
+- Changes Made:
+  - Replaced external remote Google Stitch placeholder URL (`https://lh3.googleusercontent.com/...`) with the local relative path `assets/mascot/south.png`.
+  - Added accessible alt text: `alt="STARWEAVER Cosmic Star Mascot"`.
+  - Applied responsive dimensions: `class="h-8 w-8 object-contain ..."` (32×32px).
+  - Maintained theme consistency with `drop-shadow-[0_0_8px_rgba(0,242,254,0.5)]` and subtle interactive `hover:scale-110 transition-transform`.
+  - Preserved 100% of existing puzzle mechanics, audio engine, event handlers, and HUD elements with zero layout shifts.
+- Genuine Verification Performed:
+  - File existence verified via PowerShell (`Test-Path "assets/mascot/south.png"` &rarr; `True`).
+  - Dimensions confirmed via Python Pillow (`(48, 48)` RGBA).
+  - Headless Chrome DevTools Protocol (CDP) test executed:
+    - DOM element query confirmed `attrSrc: "assets/mascot/south.png"`.
+    - Image loading status confirmed `complete: true`.
+    - Intrinsic dimensions confirmed: `naturalWidth: 48`, `naturalHeight: 48`.
+    - Rendered dimensions confirmed: `renderedWidth: 32`, `renderedHeight: 32`.
+    - Visual rendering verified via headless browser screenshot capture.
+    - Regression tests executed and passed: Tile rotation (90° &rarr; 180°), move counter increment, circuit BFS solution validation, victory modal presentation (550ms delay), undo state restoration, reset to Level 04 defaults, and hint counter decrement.
+
